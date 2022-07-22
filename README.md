@@ -5,12 +5,13 @@
 1. **CRUD Operations** like
 
 - You can add a new employee record.
-- You can display all employees record.<br/><br/>
+- You can display all employees record.
+- You can edit/update any employee record.
 - You can delete any particular record.
 
 2. **Filteration**
 
-- You can filter out max and min salary.
+- You can filter out max and min salary details.
 - You can filter out departments.
 
 ### Somethings wrong!!
