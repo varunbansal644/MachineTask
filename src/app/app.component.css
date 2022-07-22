@@ -1,0 +1,78 @@
+.formTitle {
+  background: #f6f6f6;
+  padding: 20px 20px 0px 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.input-name {
+  padding: 0px 15px 20px;
+  background: #f6f6f6;
+}
+
+.input-name input {
+  border: none;
+  height: 32px;
+  padding-left: 10px;
+  width: 30.5%;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: #0b64ca;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 25%;
+  margin: 0 10px;
+  border: none;
+  padding: 10px 0;
+}
+
+.saveBtn {
+  width: 4%;
+}
+
+.radioBtns {
+  position: absolute;
+  left: 12rem;
+  top: 20rem;
+}
+
+select {
+  position: absolute;
+  right: 12rem;
+  top: 20rem;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 80%;
+  margin: 4.5rem auto;
+}
+
+tr:nth-child(odd) {
+  background-color: #ececec;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+th {
+  background-color: #0b64ca;
+  text-align: center;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+td {
+  text-align: center;
+  border: 1px solid #fff;
+}
