@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 interface TableDetails {
   name: string;
   department: string;
@@ -10,6 +11,8 @@ interface TableDetails {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  @ViewChild('form') form: NgForm | undefined;
+
   tableColumnHeadings: Array<string> = [
     'Employee Name',
     'Department',
@@ -32,6 +35,9 @@ export class AppComponent {
   constructor() {}
 
   addEmployee() {
+    if (!this.form?.valid) {
+      return;
+    }
     this.tableData.push(this.addModel);
     this.addModel = {};
     this.filteredData = this.tableData;

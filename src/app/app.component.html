@@ -2,13 +2,17 @@
   <div class="formTitle">
     <div>{{ !isUpdate ? "Add " : "Update" }} Employee</div>
   </div>
-  <form>
+  <form
+    #form="ngForm"
+    (ngSubmit)="!isUpdate ? addEmployee() : updateEmployee()"
+  >
     <div class="input-name">
       <input
         id="name"
         name="name"
         placeholder="Emp Name"
         [(ngModel)]="addModel.name"
+        required
       />
     </div>
 
@@ -20,6 +24,7 @@
         [(ngModel)]="addModel.department"
         rows="4"
         cols="65"
+        required
       ></textarea>
     </div>
 
@@ -27,16 +32,14 @@
       <input
         id="salary"
         name="salary"
+        type="number"
         placeholder="Salary"
         [(ngModel)]="addModel.salary"
+        required
       />
     </div>
 
-    <button
-      type="submit"
-      class="saveBtn"
-      (click)="!isUpdate ? addEmployee() : updateEmployee()"
-    >
+    <button type="submit" class="saveBtn" [disabled]="!form.valid">
       {{ !isUpdate ? "Save" : "Update" }}
     </button>
   </form>
